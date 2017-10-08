@@ -1,0 +1,66 @@
+$primary: rgb(72, 125, 182);
+$info: rgb(60, 215, 188);
+$pricing-plan-active-transform: scale( 1.02 );
+@import "./bulma/bulma";
+
+body{
+}
+
+ul.standard{
+  padding-left: 1em;
+  list-style: circle outside;
+  &:not(:last-child){
+    margin-bottom: 2em;
+  }
+  li{
+    padding: .25em 0;
+  }
+  ul{
+    font-size: .8em;
+    list-style: disc inside;
+    li{
+      display: inline-flex;
+      padding: .25em;
+    }
+  }
+}
+.extra-push{
+  margin-bottom: 3em;
+}
+address{
+  margin-bottom: 1em;
+
+}
+.content-section{
+  padding: 3em 0;
+  .section-header{
+    display: flex;
+    align-items: flex-start;
+    .icon{
+      margin-right: 1.5em;
+      margin-top: .5em;
+    }
+  }
+}
+.site-columns{
+  background: $white;
+}
+.pricing-table{
+  .pricing-plan{
+    .plan-item.is-addition{
+      //background: $grey;
+      color: $black;
+    }
+  }
+}
+
+.flex-columns{
+  .column{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    .box{
+      flex: 1;
+    }
+  }
+}
