@@ -1,9 +1,17 @@
+// @import "./bulma/sass/utilities/variables.sass";
+
+$body-size: 14px;
 $primary: rgb(72, 125, 182);
 $info: rgb(60, 215, 188);
 $pricing-plan-active-transform: scale( 1.02 );
+$hr-background-color: whitesmoke;
+$column-gap: 1.5em;
+$title-color: #706d6d;
+// $background: #fbfeff;
 @import "./bulma/bulma";
 
 body{
+  background: #fbfeff;
 }
 
 ul.standard{
@@ -25,31 +33,61 @@ ul.standard{
   }
 }
 .extra-push{
-  margin-bottom: 3em;
+  margin-bottom: 3rem;
 }
-address{
-  margin-bottom: 1em;
+hr.extra-push{
+  margin: 3rem 0;
+}
 
-}
 .content-section{
-  padding: 3em 0;
-  .section-header{
-    display: flex;
-    align-items: flex-start;
-    .icon{
-      margin-right: 1.5em;
-      margin-top: .5em;
-    }
+  padding-bottom: 4rem;
+  .title{
+    margin-bottom: 2rem;
+  }
+}
+.sidebar{
+  .message:not(:last-child){
+    margin-bottom: 2rem;
   }
 }
 .site-columns{
   background: $white;
+  border-radius: $radius;
+  padding: 2rem;
+  border: 1px solid $border;
+  margin: 2rem 0;
+
 }
 .pricing-table{
   .pricing-plan{
     .plan-item.is-addition{
       //background: $grey;
       color: $black;
+    }
+    .plan-item{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+.footer-row{
+  display: flex;
+  justify-content: center;
+}
+.message.is-business-card{
+  background: $white!important;
+  font-size: $size-4;
+  display: inline-flex;
+  .message-body{
+    // color: $primary;
+  }
+  .contact-row{
+    display: inline-flex;
+    padding: .5rem 0;
+    :first-child, :last-child{
+      display: block;
+      padding: 0 1.5rem;
     }
   }
 }
